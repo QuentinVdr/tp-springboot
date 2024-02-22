@@ -1,11 +1,19 @@
 package fr.epsi.b32324c2.tpspringboot.bo;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Table(name = "pet_store")
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class PetStore {
 
     @Id

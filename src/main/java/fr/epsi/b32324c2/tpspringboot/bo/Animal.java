@@ -1,11 +1,19 @@
 package fr.epsi.b32324c2.tpspringboot.bo;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Animal {
 
     @Id

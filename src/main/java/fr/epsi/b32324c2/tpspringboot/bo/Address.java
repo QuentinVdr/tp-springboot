@@ -1,9 +1,17 @@
 package fr.epsi.b32324c2.tpspringboot.bo;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "address")
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Address {
 
     @Id
