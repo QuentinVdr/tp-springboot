@@ -33,3 +33,45 @@ Pour lancer le projet, il suffit de lancer la commande suivante.
 ```bash
 mvn spring-boot:run
 ```
+
+## Schema de base de données
+
+```mermaid
+classDiagram
+    class Address {
+        id int
+        number int
+        street varchar
+        zip_code int
+        city varchar
+    }
+    class Animal {
+        id int
+        birth date
+        color varchar
+        petstore_id int
+    }
+    class Cat {
+        chip_id varchar
+    }
+    class Fish {
+        living_env FishLivingEnv
+    }
+    class Petstore {
+        id int
+        name varchar
+        managerName varchar
+    }
+    class Produit {
+        id int
+        name varchar
+        price double
+        petstore_id int
+    }
+    
+    Petstore "N" -- "N" Produit
+    Petstore "1" -- "1" Address
+    Petstore "N" -- "N" Animal
+    Animal <|-- Cat
+    Animal <|-- Fish
+```
