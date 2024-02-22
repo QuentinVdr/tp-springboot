@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "animal")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Animal {
 
     @Id
