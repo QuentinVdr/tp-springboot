@@ -30,4 +30,7 @@ public class Address {
 
     @Column(name = "city")
     private String city;
+
+    @OneToOne(mappedBy = "address")
+    private PetStore petStore;
 }

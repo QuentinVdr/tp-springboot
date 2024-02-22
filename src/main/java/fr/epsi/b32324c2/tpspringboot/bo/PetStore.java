@@ -32,12 +32,12 @@ public class PetStore {
             joinColumns = @JoinColumn(name = "id_pet_store", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "id_product", referencedColumnName = "id")
     )
-    private List<Product> Products;
+    private List<Product> products;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "petStore")
-    private List<Animal> Animals;
+    private List<Animal> animals;
 }

@@ -33,6 +33,6 @@ public class Product {
     @Column(name = "price")
     private Double price;
 
-    @ManyToMany(mappedBy = "Products")
-    private List<PetStore> PetStore;
+    @ManyToMany(mappedBy = "products")
+    private List<PetStore> petStores;
 }
