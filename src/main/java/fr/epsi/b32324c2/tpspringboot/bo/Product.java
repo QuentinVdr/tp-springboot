@@ -2,6 +2,8 @@ package fr.epsi.b32324c2.tpspringboot.bo;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "product")
 public class Product {
@@ -22,4 +24,7 @@ public class Product {
 
     @Column(name = "price")
     private Double price;
+
+    @ManyToMany(mappedBy = "Products")
+    private List<PetStore> PetStore;
 }
