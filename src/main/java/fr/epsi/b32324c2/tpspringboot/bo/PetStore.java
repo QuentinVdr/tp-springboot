@@ -25,4 +25,8 @@ public class PetStore {
             inverseJoinColumns = @JoinColumn(name = "id_product", referencedColumnName = "id")
     )
     private List<Product> Products;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    private Address address;
 }
