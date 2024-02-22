@@ -85,12 +85,12 @@ public class TpSpringbootApplication implements CommandLineRunner {
         Animal animal2 = new Animal();
         animal2.setBirth(java.time.LocalDate.now());
         animal2.setColor("White");
-        animal1.setPetStore(petStoreSave2);
+        animal2.setPetStore(petStoreSave2);
 
         Animal animal3 = new Animal();
         animal3.setBirth(java.time.LocalDate.now());
         animal3.setColor("Brown");
-        animal1.setPetStore(petStoreSave3);
+        animal3.setPetStore(petStoreSave3);
 
         // Save animals
         animalRepository.save(animal1);
@@ -171,5 +171,10 @@ public class TpSpringbootApplication implements CommandLineRunner {
         productRepository.save(product1);
         productRepository.save(product2);
         productRepository.save(product3);
+
+        // Find all pet in pet store
+        Long petStoreSaveId = petStoreSave1.getId();
+        List<Animal> animals = animalRepository.findByPetStoreId(petStoreSaveId);
+        System.out.println("Animals of " + petStoreSave1.getName() + ": " + animals);
     }
 }
