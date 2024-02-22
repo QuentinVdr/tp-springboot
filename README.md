@@ -1,6 +1,6 @@
 # tp-springboot
 
-Projet de TP SpringBoot pour le rendu final de cours de Java.
+Projet de Quentin VERDER TP SpringBoot pour le rendu final de cours de Java.
 
 ## Installation
 
