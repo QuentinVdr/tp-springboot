@@ -29,4 +29,7 @@ public class PetStore {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "petStore")
+    private List<Animal> Animals;
 }

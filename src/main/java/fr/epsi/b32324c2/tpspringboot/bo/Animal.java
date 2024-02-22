@@ -18,4 +18,8 @@ public class Animal {
 
     @Column(name = "color")
     private String color;
+
+    @ManyToOne
+    @JoinColumn(name = "id_pet_store", referencedColumnName = "id")
+    private PetStore petStore;
 }
