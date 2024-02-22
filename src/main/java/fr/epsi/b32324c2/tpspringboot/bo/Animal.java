@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -22,7 +22,7 @@ public class Animal {
     private Long id;
 
     @Column(name = "birth")
-    private LocalDateTime birth;
+    private LocalDate birth;
 
     @Column(name = "color")
     private String color;
